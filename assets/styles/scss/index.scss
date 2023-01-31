@@ -38,7 +38,7 @@ header {
 
     a {
         align-self: flex-end;
-        @include link;
+        @include button;
         margin-right: 10%;
     }
 

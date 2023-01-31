@@ -14,6 +14,7 @@ export function Course({ name, description, id }) {
 		<h3 class="course__header">${name}</h3>
 		<div class="course__content">
 			<p>${description}</p>
+			<button type="button" data-target="#courseModal" class="modalToggler">Read More ...</button>
 		</div>
 		<a href="./enrol.html">Enrol now</a>
 	</div>
