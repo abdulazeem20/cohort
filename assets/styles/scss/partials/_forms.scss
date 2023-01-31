@@ -10,49 +10,51 @@ form {
     @media screen and (max-width: $lg) {
         width: 90%;
         max-width: 45rem;
-        // grid-template-columns: 2fr !important;  
+        // grid-template-columns: 2fr !important;
     }
     @media screen and (max-width: $md) {
         width: 90%;
         max-width: 30rem;
         grid-template-columns: 1fr !important;
     }
+    p {
+        color: $danger;
+    }
     .inputs {
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid $secondaryColor;
-        padding:0 $pad 0 0;
+        padding: 0 $pad 0 0;
         position: relative;
-    &::after{
-        position: absolute;
-        content: '';
-        background-color: $secondaryColor;
-        height: 30px;
-        right: 0;
-        width: 1px;
-        bottom: 0;
-        
-
-    }
-    // &:nth-of-type(7)::after{
-    //     width: 0;
-    // }
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: $secondaryColor;
+            height: 30px;
+            right: 0;
+            width: 1px;
+            bottom: 0;
+        }
+        // &:nth-of-type(7)::after{
+        //     width: 0;
+        // }
 
         &.gender {
             // border: none;
             display: flex;
             gap: 2rem;
             justify-content: start;
-            h2{
+            align-items: center;
+            padding-bottom: 20px;
+            h2 {
                 color: $primaryColor;
                 opacity: 0.4;
                 font-size: 1.2rem;
             }
         }
-        select{
+        select {
             cursor: pointer;
-
         }
         input,
         select {
@@ -73,7 +75,6 @@ form {
             }
             @media screen and (max-width: $lg) {
                 // width: 80%;
-
             }
         }
         div {
@@ -125,10 +126,10 @@ form {
         font-size: 1.2rem;
         position: relative;
         border: none;
-    transition: linear .5s;
+        transition: linear 0.5s;
         cursor: pointer;
-        &::after{
-            content: '';
+        &::after {
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
@@ -137,16 +138,14 @@ form {
             left: 0;
             transition: 1s;
             transform: scale(0);
-            opacity: .2;
+            opacity: 0.2;
             color: $accent;
-
         }
-        &:hover{
+        &:hover {
             background-color: $primaryColor;
             color: white;
-
         }
-        &:hover::after{
+        &:hover::after {
             transform: scale(1);
         }
         @media screen and (max-width: $md) {
