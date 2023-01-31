@@ -9,7 +9,7 @@
     <title>Enrol</title>
   </head>
   <body>
-    <form method="post">
+    <form method="post" id="enrol" action="./src/request.php">
       <h1>Cohort Registration</h1>
       <div class="input_con">
         <div class="inputs">
@@ -21,7 +21,7 @@
             placeholder="Enter Your Firstname"
           />
         </div>
-        <p></p>
+        <p class="firstname"></p>
       </div>
       <div class="input_con">
         <div class="inputs">
@@ -34,7 +34,7 @@
             required
           />
         </div>
-        <p></p>
+        <p class="lastname"></p>
       </div>
       <div class="input_con">
         <div class="inputs">
@@ -47,7 +47,7 @@
             required
           />
         </div>
-        <p></p>
+        <p class="othername"></p>
       </div>
       <div class="input_con">
         <div class="inputs">
@@ -60,91 +60,92 @@
             required
           />
         </div>
-        <p class="email-error"></p>
+        <p class="email-error email"></p>
       </div>
       <div class="input_con">
-      <div class="inputs">
-        <i class="fas fa-phone ico"></i>
-        <input
-          type="text"
-          name="phone"
-          id="phone"
-          placeholder="Enter Your Phone Number"
-          required
-        />
+        <div class="inputs">
+          <i class="fas fa-phone ico"></i>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Enter Your Phone Number"
+            required
+          />
+        </div>
+        <p class="phone-error phone"></p>
       </div>
-      <p></p>
-    </div>
-    <div class="input_con">
-      <div class="inputs">
-        <i class="fas fa-calendar-alt ico"></i>
-        <input
-          type="date"
-          name="dob"
-          id="dob"
-          placeholder="Date of birth"
-          required
-        />
-      </div>
-      <p></p>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-calendar-alt ico"></i>
+          <input
+            type="date"
+            name="dob"
+            id="dob"
+            placeholder="Date of birth"
+            required
+          />
+        </div>
+        <p class="dob"></p>
       </div>
 
       <div class="input_con">
-      <div class="inputs gender">
-        <h2>Gender</h2>
-        <div>
-          <input
-            type="radio"
-            name="gender"
-            id="male"
-            class="radio genderR"
-            value="Male"
-            required
-          />
-          <label for="male">Male</label>
+        <div class="inputs">
+          <i class="fas fa-user-graduate ico"></i>
+          <select name="admission_mode" id="admin_mode">
+            <option value="">Admission Mode</option>
+            <option value="PT">Part Time</option>
+            <option value="FT">Full Time</option>
+          </select>
         </div>
-        <div>
-          <input
-            type="radio"
-            name="gender"
-            id="female"
-            class="radio genderR"
-            value="Female"
-            required
-          />
-          <label for="female">Female</label>
-        </div>
-      </div>
-      <p></p>
+        <p class="admission_mode"></p>
       </div>
       <div class="input_con">
-      <div class="inputs">
-        <i class="fas fa-user-graduate ico"></i>
-        <select name="admission_mode">
-          <option value="null">Admission Mode</option>
-          <option value="PT">Part Time</option>
-          <option value="FT">Full Time</option>
-        </select>
-      </div>
-      <p></p>
+        <div class="inputs">
+          <i class="fas fa-user-graduate ico"></i>
+          <select name="course" id="courses">
+            <option value="">Course</option>
+            <option value="1">Frontend Development</option>
+            <option value="2">Full Stack Development</option>
+            <option value="3">Data Analysis with excel</option>
+            <option value="4">Data Analytics</option>
+            <option value="5">Data Science</option>
+            <option value="6">Graphic Design</option>
+            <option value="7">Product Design</option>
+          </select>
+        </div>
+        <p class="course"></p>
       </div>
       <div class="input_con">
-      <div class="inputs">
-        <i class="fas fa-user-graduate ico"></i>
-        <select name="course" id="courses">
-          <option value="null">Course</option>
-          <option value="PT">Front-end Development</option>
-          <option value="FT">Full Stack Development</option>
-          <option value="FT">Data Science 1</option>
-          <option value="FT">Data Science 2</option>
-          <option value="FT">Data Science 3</option>
-          <option value="FT">Graphic Design</option>
-          <option value="FT">Product Design</option>
-        </select>
+        <div class="inputs gender">
+          <h2>Gender</h2>
+          <div>
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              class="radio genderR"
+              value="M"
+              required
+              checked
+            />
+            <label for="male">Male</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              class="radio genderR"
+              value="F"
+              required
+            />
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <p></p>
       </div>
-      <p></p>
-      </div>
-      <button type="button" class="submit">Submit</button>
+      <button type="button" class="submit" id="enrolSubmit">Submit</button>
       <div class="modal">
         <span id="close"><i class="fas fa-times"></i></span>
         <h1>Registration Details</h1>
@@ -180,11 +181,16 @@
           <h3>Admission Mode:</h3>
           <h3 class="admMode"></h3>
         </div>
-
-        <div class="courses_con">
-          <h2 class="course_content"></h2>
+        <div class="details">
+          <h2>Course Description:</h2>
+          <h3 class="course"></h3>
+          <h3 class="description"></h3>
         </div>
-        <button type="submit">Proceed to Submit</button>
+        <!-- <div class="details">
+        </div> -->
+        <button type="submit" id="enrol_submit" name="insert">
+          Proceed to Submit
+        </button>
       </div>
       <div class="overlay"></div>
     </form>
