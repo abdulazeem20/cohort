@@ -1,0 +1,123 @@
+@mixin main {
+    display           : grid;
+    grid-template-rows: repeat(2, auto);
+
+    @include responsiveMedia(md) {
+        grid-template-columns: 1.5fr 2fr;
+    }
+
+    #info {
+        display       : flex;
+        flex-direction: column;
+        padding       : $pad;
+
+
+        .info__content {
+            width         : 100%;
+            max-width     : 50rem;
+            padding       : $pad calc($pad/2);
+            box-shadow    : 0 0 .2rem .2rem $shadow;
+            border-radius : .5rem;
+            display       : flex;
+            flex-direction: column;
+            gap           : 1.3rem;
+            background    : $textColor;
+
+            h3 {
+                color     : $primaryColor;
+                text-align: center;
+            }
+
+            >div {
+                display       : flex;
+                flex-direction: column;
+                gap           : 1rem;
+
+                p {
+                    position    : relative;
+                    padding-left: 2rem;
+
+                    &::before {
+                        content   : '→';
+                        position  : absolute;
+                        top       : 0;
+                        left      : 0;
+                        width     : 2rem;
+                        height    : 100%;
+                        color     : $secondaryColor;
+                        font-size : 1.4rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        @include responsiveMedia(md) {
+            .info__content {
+                position: sticky;
+                top     : 3%;
+            }
+        }
+    }
+
+    #courses {
+        display       : flex;
+        padding       : $pad;
+        flex-direction: column;
+        align-items   : center;
+        gap           : 2.5rem;
+
+
+        .section-head {
+            font-size    : 1.6rem;
+            text-align   : center;
+            margin-bottom: 2rem;
+        }
+
+        .course {
+            width         : 100%;
+            max-width     : 50rem;
+            display       : flex;
+            flex-direction: column;
+            gap           : 1.2rem;
+            position      : relative;
+            padding       : 1rem;
+            box-shadow    : 0 .2rem .2rem 0 $shadow;
+            background    : $textColor;
+            overflow      : hidden;
+            border-radius : .5rem;
+            @extend %transition;
+
+            >p {
+                color        : $textColor;
+                font-size    : .8rem;
+                width        : max-content;
+                padding      : .5rem;
+                border-radius: 0 50px 50px 0;
+                background   : $secondaryColor;
+                transform    : scale(.9);
+            }
+
+            &__header {
+                font-size: 1.5rem;
+            }
+
+            &__content {
+                display       : flex;
+                flex-direction: column;
+                gap           : 1rem;
+                font-size     : clamp(1rem, 1.4vw, 1.2rem);
+
+                button {
+                    align-self: flex-end;
+                    @include link;
+                }
+            }
+
+            a {
+                @include button;
+                align-self: flex-end;
+            }
+        }
+    }
+}

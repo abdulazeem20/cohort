@@ -1,0 +1,53 @@
+@import "./partials/autoload";
+@import "./partials/indexmain";
+
+body {
+    display           : grid;
+    grid-template-rows: auto 1fr;
+    font-family       : Arial, Helvetica, sans-serif;
+}
+
+
+
+header {
+    display       : flex;
+    flex-direction: column;
+    padding       : $pad;
+    align-items   : center;
+    gap           : 3rem;
+
+    >div {
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        gap            : 1rem;
+
+        img {
+            height   : 5rem;
+            max-width: 20rem;
+        }
+
+    }
+
+    p {
+        font-size  : 20px;
+        line-height: 1.3;
+        text-align : center;
+    }
+
+    a {
+        align-self: flex-end;
+        @include link;
+        margin-right: 10%;
+    }
+
+}
+
+main {
+    @include main;
+}
+
+.courseModal {
+    .modalContent {}
+}

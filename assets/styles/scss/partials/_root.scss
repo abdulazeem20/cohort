@@ -1,0 +1,13 @@
+* {
+    border         : 0;
+    margin         : 0;
+    box-sizing     : border-box;
+    scrollbar-width: thin;
+}
+
+body {
+    width     : 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: $background;
+}

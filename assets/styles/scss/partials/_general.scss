@@ -1,0 +1,116 @@
+%transition {
+    transition: .5s linear all;
+}
+
+.section-head {
+    font-size : 2.5rem;
+    text-align: center;
+}
+
+@mixin link {
+    text-decoration: none;
+    color          : $secondaryColor;
+    cursor         : pointer;
+    background     : none;
+    font-size      : 1rem;
+    @extend %transition;
+
+    &:hover {
+        color: $primaryColor;
+    }
+}
+
+@mixin button {
+    text-decoration   : none;
+    width             : max-content;
+    cursor            : pointer;
+    // display        : block;
+    border            : 1px solid $primaryColor;
+    color             : $primaryColor;
+    padding           : .6rem 1rem;
+    border-radius     : .2rem;
+    position          : relative;
+    @extend %transition;
+
+    &::before {
+        content : '';
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        width   : 0;
+        height  : 100%;
+        @extend %transition;
+        background: $primaryColor;
+        opacity   : .5;
+    }
+
+    &:hover {
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+.myModal {
+    position   : fixed;
+    top        : 0;
+    height     : 100%;
+    width      : 100%;
+    background : $modalBackground;
+    place-items: center;
+    cursor     : pointer;
+    display    : none;
+
+    &.open {
+        display: grid;
+    }
+
+
+    .modalContent {
+        position      : relative;
+        background    : $textColor;
+        width         : 90%;
+        max-width     : 35rem;
+        max-height    : 90%;
+        overflow-x    : hidden;
+        overflow-wrap : auto;
+        animation     : modalAnimate .5s linear;
+        display       : flex;
+        flex-direction: column;
+
+        @keyframes modalAnimate {
+            from {
+                opacity  : .5;
+                transform: translateY(10%);
+            }
+
+            to {
+                opacity  : 1;
+                transform: translateY(0);
+            }
+        }
+
+        .myModal-body {
+            padding   : 1rem;
+            overflow-y: auto;
+        }
+
+        .myModal-header {
+            text-align: right;
+
+            .modal-close {
+                padding   : .4rem .8rem;
+                font-size : 1.5rem;
+                cursor    : pointer;
+                background: none;
+                color     : $primaryColor;
+                @extend %transition;
+
+                &:hover {
+                    background: $primaryColor;
+                    color     : $secondaryColor;
+                }
+            }
+        }
+    }
+}

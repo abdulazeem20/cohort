@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Frontend Development",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+    },
+    {
+        "id": 2,
+        "name": "Fullstack Development",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+    },
+    {
+        "id": 3,
+        "name": "Data Analytics 1",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+    },
+    {
+        "id": 4,
+        "name": "Data Analytics 2",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+    },   
+    {
+        "id": 5,
+        "name": "Data Analytics 3",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+    },
+    {
+        "id": 6,
+        "name": "Graphics Design",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+    },
+    {
+        "id": 7,
+        "name": "Product Design",
+        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+    }
+]
