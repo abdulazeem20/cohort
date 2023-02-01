@@ -16,7 +16,7 @@ export function Course({ name, description, id }) {
 			<p>${description}</p>
 			<button type="button" data-target="#courseModal" class="modalToggler">Read More ...</button>
 		</div>
-		<a href="./enrol.html">Enrol now</a>
+		<a href="./enrol.html">enrol now</a>
 	</div>
 	`);
 	course.find(".modalToggler").on("click", handleModal);

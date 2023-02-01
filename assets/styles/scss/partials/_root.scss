@@ -4,7 +4,20 @@
     border         : 0;
     margin         : 0;
     box-sizing     : border-box;
+    outline        : none;
     scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    background: $secondaryColor;
+    width     : .3rem;
+    height    : .3rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $primaryColor;
+    height    : 50%;
+    width     : 50%;
 }
 
 body {

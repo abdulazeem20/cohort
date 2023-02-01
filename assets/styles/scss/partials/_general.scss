@@ -9,7 +9,7 @@
 
 @mixin link {
     text-decoration: none;
-    color          : $secondaryColor;
+    color          : $secondaryColorAlt;
     cursor         : pointer;
     background     : none;
     font-size      : 1rem;
@@ -21,15 +21,16 @@
 }
 
 @mixin button {
-    text-decoration   : none;
-    width             : max-content;
-    cursor            : pointer;
-    // display        : block;
-    border            : 1px solid $primaryColor;
-    color             : $primaryColor;
-    padding           : .6rem 1rem;
-    border-radius     : .2rem;
-    position          : relative;
+    text-decoration: none;
+    width          : max-content;
+    cursor         : pointer;
+    display        : block;
+    border         : 1px solid $primaryColor;
+    color          : $primaryColor;
+    padding        : .6rem 1rem;
+    border-radius  : .2rem;
+    position       : relative;
+    z-index        : 1;
     @extend %transition;
 
     &::before {
@@ -41,10 +42,12 @@
         height  : 100%;
         @extend %transition;
         background: $primaryColor;
-        opacity   : .5;
+        z-index   : -1;
     }
 
     &:hover {
+        color: $textColor;
+
         &::before {
             width: 100%;
         }
@@ -60,6 +63,7 @@
     place-items: center;
     cursor     : pointer;
     display    : none;
+    z-index    : 1;
 
     &.open {
         display: grid;
@@ -80,7 +84,7 @@
 
         @keyframes modalAnimate {
             from {
-                opacity  : .5;
+                opacity  : .9;
                 transform: translateY(10%);
             }
 
@@ -99,16 +103,16 @@
             text-align: right;
 
             .modal-close {
-                padding   : .4rem .8rem;
-                font-size : 1.5rem;
+                padding   : .2rem .8rem;
+                font-size : 1.7rem;
                 cursor    : pointer;
                 background: none;
                 color     : $primaryColor;
                 @extend %transition;
 
                 &:hover {
-                    background: $primaryColor;
-                    color     : $secondaryColor;
+                    background: $danger;
+                    color     : $textColor;
                 }
             }
         }
