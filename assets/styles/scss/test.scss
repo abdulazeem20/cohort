@@ -13,11 +13,6 @@ body {
     }
 }
 
-header,
-main,
-footer {
-    // border    : 1px solid red;
-}
 
 main {
     @include main;
