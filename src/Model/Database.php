@@ -13,7 +13,7 @@ class Database
     public function connect()
     {
         try {
-            $connect = new PDO("mysql:dbname=cohort;host=localhost", "root", "kenny");
+            $connect = new PDO("mysql:dbname=cohort;host=localhost", "root", "");
             $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             // echo "Connection Successful";
             $this->connection = $connect;
@@ -37,7 +37,6 @@ class Database
             echo "Error During connection {$e->getMessage()}";
         }
     }
-
 
     private function filterElement(array $data)
     {
