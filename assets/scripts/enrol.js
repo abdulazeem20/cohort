@@ -9,6 +9,7 @@ $("#email").on('input', function () {
             }
             else {
                 $(".email-error").empty()
+                $("#enrolSubmit").prop({ disabled: false });
             }
         })
 })
@@ -23,12 +24,14 @@ $("#phone").on('input', function () {
             }
             else {
                 $(".phone-error").empty()
+                $("#enrolSubmit").prop({ disabled: false });
             }
         })
 })
 $(".submit").click(function () {
     let data = new FormData($("#enrol")[0]);
     data.append("enrolValidate", true);
+    console.log(data)
     $.ajax({
         method: "POST",
         url: "../../src/request.php",
@@ -48,8 +51,7 @@ $(".submit").click(function () {
             } else if (res.message.num_invalid) {
                 $(".phone-error").empty().append(res.message.num_invalid)
             }
-            return
-        } else {
+        } else if (res.status == "success") {
             $("form div p").empty()
             $(".modal .firstname").text($("#firstname").val())
             $(".modal .lastname").text($("#lastname").val())

@@ -1,0 +1,13 @@
+[
+    {
+        "id" : 1,
+        "question" : "Whats Your name",
+        "options" : [
+            "tunji",
+            "br@nd",
+            "tayo",
+            "Habeeb"
+        ],
+        "answer" : 3
+    }
+]

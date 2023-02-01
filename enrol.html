@@ -1,155 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./assets/styles/css/enrol.css" />
-		<link rel="stylesheet" href="./assets/styles/css/all.min.css" />
-		<title>Enrol</title>
-	</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./assets/styles/css/enrol.css" rel="stylesheet">
+    <link href="./assets/styles/css/all.min.css" rel="stylesheet">
+    <title>Enrol</title>
+  </head>
 
-	<body>
-		<form method="post" id="enrol" action="./src/request.php">
-			<h1>Cohort Registration</h1>
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-user ico"></i>
-					<input type="text" name="firstname" id="firstname" placeholder="Enter Your Firstname" />
-				</div>
-				<p class="firstname"></p>
-			</div>
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-user ico"></i>
-					<input type="text" name="lastname" id="lastname" placeholder="Enter Your Lastname" required />
-				</div>
-				<p class="lastname"></p>
-			</div>
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-user ico"></i>
-					<input type="text" name="othername" id="othername" placeholder="Enter Your Other Name" required />
-				</div>
-				<p class="othername"></p>
-			</div>
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-envelope ico"></i>
-					<input type="email" name="email" id="email" placeholder="Enter Your Email" required />
-				</div>
-				<p class="email-error email"></p>
-			</div>
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-phone ico"></i>
-					<input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number" required />
-				</div>
-				<p class="phone-error phone"></p>
-			</div>
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-calendar-alt ico"></i>
-					<input type="date" name="dob" id="dob" placeholder="Date of birth" required />
-				</div>
-				<p class="dob"></p>
-			</div>
-
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-user-graduate ico"></i>
-					<select name="admission_mode" id="admin_mode">
-						<option value="">Admission Mode</option>
-						<option value="PT">Part Time</option>
-						<option value="FT">Full Time</option>
-					</select>
-				</div>
-				<p class="admission_mode"></p>
-			</div>
-			<div class="input_con">
-				<div class="inputs">
-					<i class="fas fa-user-graduate ico"></i>
-					<select name="course" id="courses">
-						<option value="">Course</option>
-						<option value="1">Frontend Development</option>
-						<option value="2">Fullstack Development</option>
-						<option value="3">Data Analysis with excel</option>
-						<option value="4">Data Analytics</option>
-						<option value="5">Data Science</option>
-						<option value="6">Graphic Design</option>
-						<option value="7">Product Design</option>
-					</select>
-				</div>
-				<p class="course"></p>
-			</div>
-			<div class="input_con">
-				<div class="inputs gender">
-					<h2>Gender</h2>
-					<div>
-						<input type="radio" name="gender" id="male" class="radio genderR" value="M" required checked />
-						<label for="male">Male</label>
-					</div>
-					<div>
-						<input type="radio" name="gender" id="female" class="radio genderR" value="F" required />
-						<label for="female">Female</label>
-					</div>
-				</div>
-				<p></p>
-			</div>
-			<button type="button" class="submit" id="enrolSubmit">Submit</button>
-			<div class="modal">
-				<span id="close"><i class="fas fa-times"></i></span>
-				<h1>Registration Details</h1>
-				<div class="details">
-					<h3>Firstname:</h3>
-					<h3 class="firstname"></h3>
-				</div>
-				<div class="details">
-					<h3>Lastname:</h3>
-					<h3 class="lastname"></h3>
-				</div>
-				<div class="details">
-					<h3>Other name:</h3>
-					<h3 class="othername"></h3>
-				</div>
-				<div class="details">
-					<h3>Email:</h3>
-					<h3 class="email"></h3>
-				</div>
-				<div class="details">
-					<h3>Phone Number:</h3>
-					<h3 class="phone"></h3>
-				</div>
-				<div class="details">
-					<h3>Date of Birth:</h3>
-					<h3 class="dob"></h3>
-				</div>
-				<div class="details">
-					<h3>Sex:</h3>
-					<h3 class="sex"></h3>
-				</div>
-				<div class="details">
-					<h3>Admission Mode:</h3>
-					<h3 class="admMode"></h3>
-				</div>
-				<div class="details">
-					<h2>Course Description:</h2>
-					<h3 class="course"></h3>
-					<h3 class="description"></h3>
-				</div>
-				<!-- <div class="details">
+  <body>
+    <form id="enrol" method="post" action="./src/request.php">
+      <h1>Cohort Registration</h1>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-user ico"></i>
+          <input id="firstname" name="firstname" type="text" placeholder="Enter Your Firstname">
+        </div>
+        <p class="firstname"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-user ico"></i>
+          <input id="lastname" name="lastname" type="text" placeholder="Enter Your Lastname" required>
+        </div>
+        <p class="lastname"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-user ico"></i>
+          <input id="othername" name="othername" type="text" placeholder="Enter Your Other Name" required>
+        </div>
+        <p class="othername"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-envelope ico"></i>
+          <input id="email" name="email" type="email" placeholder="Enter Your Email" required>
+        </div>
+        <p class="email-error email"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-phone ico"></i>
+          <input id="phone" name="phone" type="text" placeholder="Enter Your Phone Number" required>
+        </div>
+        <p class="phone-error phone"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-calendar-alt ico"></i>
+          <input id="dob" name="dob" type="date" placeholder="Date of birth" required>
+        </div>
+        <p class="dob"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-user-graduate ico"></i>
+          <select id="admin_mode" name="admission_mode">
+            <option value="">Admission Mode</option>
+            <option value="PT">Part Time</option>
+            <option value="FT">Full Time</option>
+          </select>
+        </div>
+        <p class="admission_mode"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs">
+          <i class="fas fa-user-graduate ico"></i>
+          <select id="courses" name="course">
+            <option value="">Course</option>
+            <option value="1">Frontend Development</option>
+            <option value="2">Fullstack Development</option>
+            <option value="3">Data Analysis with excel</option>
+            <option value="4">Data Analytics</option>
+            <option value="5">Data Science</option>
+            <option value="6">Graphic Design</option>
+            <option value="7">Product Design</option>
+          </select>
+        </div>
+        <p class="course"></p>
+      </div>
+      <div class="input_con">
+        <div class="inputs gender">
+          <h2>Gender</h2>
+          <div>
+            <input class="radio genderR" id="male" name="gender" type="radio" value="M" required checked>
+            <label for="male">Male</label>
+          </div>
+          <div>
+            <input class="radio genderR" id="female" name="gender" type="radio" value="F" required>
+            <label for="female">Female</label>
+          </div>
+        </div>
+        <p></p>
+      </div>
+      <button class="submit" id="enrolSubmit" type="button">Submit</button>
+      <div class="modal">
+        <span id="close">
+          <i class="fas fa-times"></i>
+        </span>
+        <h1>Registration Details</h1>
+        <div class="details">
+          <h3 class="detail-title">Firstname:</h3>
+          <h3 class="firstname"></h3>
+        </div>
+        <div class="details">
+          <h3 class="detail-title">Lastname:</h3>
+          <h3 class="lastname"></h3>
+        </div>
+        <div class="details">
+          <h3 class="detail-title">Other name:</h3>
+          <h3 class="othername"></h3>
+        </div>
+        <div class="details">
+          <h3 class="detail-title">Email:</h3>
+          <h3 class="email"></h3>
+        </div>
+        <div class="details">
+          <h3 class="detail-title">Phone Number:</h3>
+          <h3 class="phone"></h3>
+        </div>
+        <div class="details">
+          <h3 class="detail-title">Date of Birth:</h3>
+          <h3 class="dob"></h3>
+        </div>
+        <div class="details">
+          <h3 class="detail-title">Sex:</h3>
+          <h3 class="sex"></h3>
+        </div>
+        <div class="details">
+          <h3 class="detail-title">Admission Mode:</h3>
+          <h3 class="admMode"></h3>
+        </div>
+        <div class="details">
+          <h2 class="detail-title">Course Description:</h2>
+          <h3 class="course"></h3>
+          <h3 class="description"></h3>
+        </div>
+        <!-- <div class="details">
         </div> -->
-				<button type="submit" id="enrol_submit" name="insert">
-					Proceed to Submit
-				</button>
-			</div>
-			<div class="overlay"></div>
-		</form>
-
-		<script src="./assets/scripts/all.min.js"></script>
-		<script src="./assets/scripts/jquery.js"></script>
-		<script src="./assets/scripts/enrol.js" type="module"></script>
-	</body>
+        <button id="enrol_submit" name="insert" type="submit">
+          Proceed to Submit
+        </button>
+      </div>
+      <div class="overlay"></div>
+    </form>
+    <script src="./assets/scripts/all.min.js"></script>
+    <script src="./assets/scripts/jquery.js"></script>
+    <script src="./assets/scripts/enrol.js" type="module"></script>
+  </body>
 
 </html>

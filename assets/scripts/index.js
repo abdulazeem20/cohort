@@ -1,5 +1,4 @@
 import { Course } from "./components/Course.js";
-
 try {
 	let coursesRes = await fetch(
 		`${location.origin}/assets/scripts/contents/courses.json`
@@ -9,4 +8,4 @@ try {
 	courses.forEach((el) => {
 		$("#courses .courses__container").append(Course(el));
 	});
-} catch (error) {}
+} catch (error) { }
