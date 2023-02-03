@@ -4,6 +4,50 @@ require_once __DIR__ . "/Database.php";
 class Intern extends Database
 {
     protected $table = "intern";
+
+    public function fetchUser($data)
+    {
+        try {
+            $query = "SELECT * FROM intern WHERE email = :email";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute([
+                ":email" => $data["email"]
+            ]);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (PDOException $e) {
+            echo "Error: {$e->getMessage()}";
+        }
+    }
+
+    public function updateScore($data)
+    {
+        try {
+            $query = "UPDATE intern SET score = :score, testStatus = 1 WHERE email = :email";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute([
+                ":email" => $data["email"],
+                ":score" => $data["score"]
+            ]);
+            return true;
+        } catch (PDOException $e) {
+            echo "Error: {$e->getMessage()}";
+        }
+    }
+    public function updateTrial($data)
+    {
+        try {
+            $query = "UPDATE intern SET trial = trial+1 WHERE email = :email";
+            $stmt = $this->connection->prepare($query);
+            $stmt->execute([
+                ":email" => $data["email"]
+            ]);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $result;
+        } catch (PDOException $e) {
+            echo "Error: {$e->getMessage()}";
+        }
+    }
     public function insert($data)
     {
         // print_r($data);

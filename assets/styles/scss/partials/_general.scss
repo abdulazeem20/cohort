@@ -64,7 +64,7 @@
     place-items: center;
     cursor     : pointer;
     display    : none;
-    z-index    : 1;
+    z-index    : 10;
 
     &.open {
         display: grid;
@@ -82,6 +82,7 @@
         animation     : modalAnimate .5s linear;
         display       : flex;
         flex-direction: column;
+        border-radius : .2rem;
 
         @keyframes modalAnimate {
             from {

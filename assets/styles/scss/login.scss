@@ -4,11 +4,12 @@ body {
     display    : grid;
     place-items: center;
     padding    : $pad;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 form {
     width          : 100%;
-    max-width      : 20rem;
+    max-width      : 30rem;
     display        : flex;
     flex-direction : column;
     justify-content: center;
@@ -63,4 +64,17 @@ form {
         }
     }
 
+    .alert {
+        font-weight: bolder;
+        align-self : start;
+        margin-top : -1rem;
+
+        &.success {
+            color: $success;
+        }
+
+        &.error {
+            color: $danger;
+        }
+    }
 }

@@ -2,13 +2,13 @@
     {
         "id": 1,
         "name": "Frontend Development",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum.",
+        "description": "Learn how to build a creative website using all the amazing tools for buillding a mobile first website.",
         "tools": ["HTML", "CSS","SCSS","BOOTSTRAP","JAVASCRIPT", "REACT"]
     },
     {
         "id": 2,
         "name": "Fullstack Development",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum.",
+        "description": "Learn how to build a dynamic and roboust web applications.",
         "tools": ["NODEJS", "EXPRESS","PHP","LARAVEL","MONGODB", "MYSQL"]
     },
     {
