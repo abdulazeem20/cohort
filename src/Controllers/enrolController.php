@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/../Model/Intern.php";
+require_once __DIR__ . "/./../library/Email.php";
 
 
 class EnrolController
@@ -73,6 +74,7 @@ class EnrolController
     {
         $insert = ((new Intern())->insert($data));
         if ($insert) {
+            (new Email($data))->sendCongratulatoryMessage();
             header('location: ../../login.php');
         } else {
             header("location:" . $_SERVER['HTTP_ORIGIN'] . '/enrol.html');

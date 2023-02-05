@@ -1,8 +1,9 @@
 <?php
-// session_start();
+session_start();
 // session_destroy();
 require_once __DIR__ . "/./Controllers/enrolController.php";
 require_once __DIR__ . "/./Model/Intern.php";
+require_once __DIR__ . "/./library/Email.php";
 
 if (isset($_POST['exist'])) {
     array_pop($_POST);
@@ -40,6 +41,8 @@ if (isset($_POST['exist'])) {
         "score" => $_POST["score"]
     ]);
     if ($update) {
+        $user = (new Intern())->fetchUser(["email" => $_SESSION["testUser"]])[0];
+        (new Email($user))->sendTestCompletionMessage();
         session_destroy();
         echo json_encode(["status" => true]);
     } else {

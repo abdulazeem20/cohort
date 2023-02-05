@@ -37,17 +37,17 @@ class Mailer
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('support@klemweb.com', 'Klemweb Cohort team');
+            $mail->setFrom('noreply@klemweb.com', 'Klemweb Cohort Team');
             $mail->addAddress($this->internEmail, $this->internName);     //Add a recipient
-            $mail->addReplyTo('support@klemweb.com', 'Klemweb Cohort team');
+            $mail->addReplyTo('support@klemweb.com', 'Klemweb Support team');
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = $this->subject;
             $mail->Body    = $this->message;
 
             $mail->send();
-            echo 'Message has been sent';
-            return true;
+            // echo 'Message has been sent';
+            // return true;
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
