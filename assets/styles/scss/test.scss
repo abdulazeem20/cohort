@@ -13,6 +13,18 @@ body {
     }
 }
 
+@mixin buttonChange($color) {
+    color       : $color;
+    border-color: $color;
+
+    &:hover {
+        color: $textColor;
+    }
+
+    &:before {
+        background: $color;
+    }
+}
 
 main {
     @include main;
@@ -71,6 +83,85 @@ footer {
 
     button {
         @include button;
-        height: fit-content;
+        @include buttonChange($danger);
+        height   : fit-content;
+        font-size: 1rem;
+
+        &.active {
+            color       : $primaryColor !important;
+            border-color: $primaryColor !important;
+
+            &:hover {
+                color: $textColor !important;
+            }
+
+            &:before {
+                background: $primaryColor !important;
+            }
+        }
+
+        &.answered {
+            color       : $success;
+            border-color: $success;
+
+            &:hover {
+                color: $textColor;
+            }
+
+            &:before {
+                background: $success;
+            }
+        }
+
+    }
+}
+
+#confirmModal {
+    .modalContent {
+        max-width: 25rem;
+
+        .myModal-body {
+            display        : flex;
+            flex-direction : column;
+            justify-content: center;
+            align-items    : center;
+            gap            : clamp(1rem, 5vw, 2rem);
+
+            >div:first-of-type {
+                font-size: clamp(3rem, 5vw, 4rem);
+                color    : $danger;
+            }
+
+            p {
+                font-size : clamp(1rem, 5vw, 1.5rem);
+                text-align: center;
+            }
+
+            .button__container {
+                display        : flex;
+                gap            : 1rem;
+                justify-content: flex-end;
+                width          : 100%;
+
+                button {
+                    font-size: 1rem;
+                    @include button;
+                    width: 100%;
+
+                    &.submit {
+                        color       : $success;
+                        border-color: $success;
+
+                        &::before {
+                            background: $success;
+                        }
+
+                        &:hover {
+                            color: $textColor;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

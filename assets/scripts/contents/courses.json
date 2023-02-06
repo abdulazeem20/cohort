@@ -2,41 +2,72 @@
     {
         "id": 1,
         "name": "Frontend Development",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum.",
-        "tools": ["HTML", "CSS","SCSS","BOOTSTRAP","JAVASCRIPT", "REACT"]
+        "mini_info": "Learn how to build a creative website using all the amazing tools for buillding a mobile first website.",
+        "description": "As a Fronted Engineer using web languages like HTML, CSS, JavaScript, and React, Angular, and Vue that enable users to access and interact with the site or app, you are prepared to develop the front-end component of websites and web apps, or the part that users actually view and use.",
+        "duration": "4 months",
+        "ft": "(4 hours/day, 4 days/week)",
+        "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
+        "tuition": 3500
     },
     {
         "id": 2,
-        "name": "Fullstack Development",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum.",
-        "tools": ["NODEJS", "EXPRESS","PHP","LARAVEL","MONGODB", "MYSQL"]
+        "name": "Backend Development",
+        "mini_info": "Learn how to perform server-side tasks including data storage, security, and other tasks that users are not aware of as a backend engineer.",
+        "description": "Backend Engineers are the specialists that create and maintain the systems that process data and carry out operations on websites utilizing platforms like ExpresJS, NodeJS, PHP Laravel and Python Django.",
+        "duration": "4 months",
+        "ft": "(4 hours/day, 4 days/week)",
+        "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
+        "tuition": 3500
     },
+    
     {
         "id": 3,
-        "name": "Data Analysis with excel",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum.",
-        "tools": ["EXCEL"]
+        "name": "Fullstack Development",
+        "mini_info": "Learn how to build a dynamic and roboust web applications putting together both the frontend skills and the backend skills.",
+        "description": "When selecting a team head, Full-stack engineers are frequently the best option because they are knowledgeable in both the frontend and the backend. Full-stack Engineers are knowledgeable about server, network, and hosting setups as well as frontend and backend languages and frameworks.",
+        "duration": "4 months",
+        "ft": "(4 hours/day, 4 days/week)",
+        "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
+        "tuition": 3500
     },
     {
         "id": 4,
-        "name": "Data Analytics",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum.",
-        "tools": ["EXCEL", "TABLEAU","POWERBI"]
+        "name": "Data Analysis",
+        "mini_info": "Learn how to inspect, cleanse, transform and model data with the goal of descovering useful information , informing conclusion and supporting decision making.",
+        "description": "As a data analyst, you have a better understanding of key concepts and the nuances in statistical methods. This also includes studying trends in data, how to use data to solve business problems, and bringing together diverse data, scientific methods, processes, and analytics to drive value for your organization using Microsoft Excel, Power BI, SQL, Tableau and SPSS etc",
+        "duration": "3 months",
+        "ft": "(4 hours/day, 5 days/week)",
+        "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
+        "tuition": 3500
     },   
     {
         "id": 5,
         "name": "Data Science",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum.",
-        "tools": ["PYTHON", "R"]
+        "mini_info": "Learn how to analyze data for actionable insights by identifying data-analytics problems that offer the greatest opportunities to any organization.",
+        "description": "Data Science professionals are able to understand business intelligence, advanced data mining, data visualization, predictive analytics and data science programming and implement the methods using real data obtained from different sources. You’ll work with different packages and understand deep concepts which include; Mathematics, Statistics, R Programming, Python, Advanced Statistics in Python, Machine & Deep Learning .",
+        "duration": "8 months",
+        "ft": "(4 hours/day, 5 days/week)",
+        "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
+        "tuition": 3500
     },
     {
         "id": 6,
         "name": "Graphics Design",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+        "mini_info": "Learn all the skills and technique you need to get you started creating incredible designs.",
+        "description": "Do you want to know the process of creating Logos and Branding packages? Are you intimidated by learning Photoshop, Illustrator or InDesign and want to learn through practical real-world projects?  Then This course will be for you! .",
+        "duration": "2 months",
+        "ft": "(2 hours/day, 5 days/week)",
+        "pt": "5 hours/day | Weekends | (Fridays and Saturdays)",
+        "tuition": 3500
     },
     {
         "id": 7,
         "name": "Product Design",
-        "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste libero tempora inventore magni  Harum tempore eaque nam quasi obcaecati mollitia, recusandae aliquid ex ipsum."
+        "mini_info": "Learn all the fundamentals as well as more complex approaches, and simultaneously improve your talents as a web designer and UI/UX developer—a highly sought-after mix of knowledge and abilities.",
+        "description": "To create attractive products and learn about UX/UI and interactions, you must have a solid understanding of the ideas and foundations of UX design. The needs of the end users and their behavioural patterns will be used to build the user interface (UI) and user experience (UX) for the product. To help the company and users decide on the final look and functionality of the product, prototypes are made of UI designs. You'll develop a thorough understanding of how to use apps that are well-known in the industry to design, research, brainstorm, ideate, wireframe, create user flows, prototype, and much more.",
+        "duration": "3 months",
+        "ft":  "(2 hours/day, 4 days/week)",
+        "pt": "5 hours/day | Weekends | (Fridays and Saturdays)",
+        "tuition": 3500
     }
 ]

@@ -1,57 +1,41 @@
 form {
-    width                : 60%;
+    width                : 100%;
+    max-width            : 45rem;
+    overflow-x           : hidden;
     display              : grid;
     padding              : calc($pad + 1rem);
     margin               : auto;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap                  : calc($pad * 1.5);
-    overflow             : hidden;
     background           : $textColor;
     box-shadow           : 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
     border-radius        : .5rem;
 
-    @media screen and (max-width: $lg) {
-        width                   : 90%;
-        max-width               : 45rem;
-        // grid-template-columns: 2fr !important;
+    @media screen and (min-width: $sm) {
+        width: 90%;
     }
 
-    @media screen and (max-width: $md) {
-        width                : 90%;
-        max-width            : 30rem;
-        margin-top           : 1rem;
-        grid-template-columns: 1fr !important;
+    @media screen and (min-width: $md) {
+        grid-template-columns: repeat(2, 1fr);
     }
+
 
     p {
         color: $danger;
     }
 
     .inputs {
-        display                : flex;
-        justify-content        : space-between;
-        align-items            : center;
-        border-bottom          : 1px solid $primaryColor;
-        padding                : 0 $pad 0 0;
-        position               : relative;
-        border                 : 1px solid $primaryColor;
-        border-radius          : .2rem;
-        // &::after {
-        //     position        : absolute;
-        //     content         : "";
-        //     background-color: $primaryColor;
-        //     height          : 30px;
-        //     right           : 0;
-        //     width           : 1px;
-        //     bottom          : 0;
-        // }
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        border-bottom  : 1px solid $primaryColor;
+        padding        : 0 $pad 0 0;
+        position       : relative;
+        border         : 1px solid $primaryColor;
+        border-radius  : .2rem;
 
-        // &:nth-of-type(7)::after{
-        //     width: 0;
-        // }
 
         &.gender {
-            // border: none;
             display        : flex;
             gap            : 2rem;
             justify-content: start;
@@ -87,10 +71,6 @@ form {
                 color  : $primaryColor;
                 opacity: 0.4;
             }
-
-            @media screen and (max-width: $lg) {
-                // width: 80%;
-            }
         }
 
         div {
@@ -105,10 +85,6 @@ form {
                 color    : $primaryColor;
                 cursor   : pointer;
             }
-
-            // input[type="radio"]{
-            //     width: 30px;
-            // }
         }
 
         select {
@@ -134,21 +110,19 @@ form {
         text-align    : center;
         padding-bottom: 1rem;
         color         : $primaryColor;
-        grid-column   : 1 / span 2;
 
-        @media screen and (max-width: $md) {
-            grid-column: 1 / span 1;
-            font-size  : 1.5rem;
+        @media screen and (min-width: $md) {
+            grid-column: 1 / span 2;
         }
     }
 
     button {
-        grid-column: 1 / span 2;
         @include button;
-        width: 100%;
+        width    : 100%;
+        font-size: 1rem;
 
-        @media screen and (max-width: $md) {
-            grid-column: 1 / span 1;
+        @media screen and (min-width: $md) {
+            grid-column: 1 / span 2;
         }
     }
 }

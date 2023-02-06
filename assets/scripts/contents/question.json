@@ -1,0 +1,606 @@
+[
+    {
+        "question": "Which language runs in a web browser?",
+        "options":[
+            "Java",
+            "C++",
+            "Python",
+            "javascript"],
+        "answer": "4"
+    },
+    {
+        "question": "What does CSS stand for?",
+        "options":[
+            "Central Style Sheets" ,
+            "Cascading Style Sheets",
+            "Cascading Simple Sheets",
+            "Cars SUVs Sailboats"],
+        "answer": "2"
+    },
+    {
+        "question": "What does HTML stand for?",
+        "options":[
+            "Hypertext Markup Language",
+            "Hypertext Markdown Language",
+            "Hyperloop Machine Language",
+            "Helicopters Terminals Motorboats Lamborgini"],
+        "answer": "1"
+    },
+    {
+       "question": "What year was Javascript Lunched?",
+        "options":[
+            "1996",
+            "1995",
+            "1994",
+            "none of the above"],
+        "answer": "2"
+    },
+    {
+        "question": "How many states are in southern Nigeria?",
+        "options": [
+            "21",
+            "17",
+            "36",
+            "14"],
+        "answer": "2"
+    },
+    {
+        "question":"Who is the first president of Nigeria?",
+        "options":[
+            "Alhaji Shehu Shagari",
+            "Aguiyi Ironsi",
+            "Dr. Nnamdi Azikwe",
+            "Prof. Grace Alele Williams"
+        ],
+        "answer":"3"
+    },  {
+        "question":"What is the ruling political party in Delta State?",
+        "options":[
+            "All Progressive Congress (APC)",
+            "Peoples Democratic Party (PDP)",
+            "Nigerian National Democratic Party (NNDP)",
+            "Labour Democratic Party (LDP)"
+        ],
+        "answer":"2"
+    },  {
+        "question":"Which political party is the ruling party in Nigeria?",
+        "options":[
+            "Peoples Democratic Party (PDP)",
+            "Nigerian National Democratic Party(NNDP)",
+            "Labour Democratic Party (LDP)",
+            "All Progressive Congress (APC)"
+        ],
+        "answer":"4"
+    },  {
+        "question":"When was the Nigerian first political party formed?",
+        "options":[
+            "1923",
+            "1960",
+            "1990",
+            "1965"
+        ],
+        "answer":"1"
+    },  {
+        "question":"What is the first political party in Nigeria?",
+        "options":[
+            "All Progressive Congress",
+            "Peoples Democratic Party",
+            "Nigerian National Democratic Party",
+            "Labour Democratic Party (LDP)"
+        ],
+        "answer":"3"
+    },  {
+        "question":"How many states are in Nigeria?",
+        "options":[
+            "25",
+            "36",
+            "37",
+            "26"
+        ],
+        "answer":"2"
+    },
+     {
+       "question": "Who is the African slave boy that later became a bishop?",
+        "options": [
+            "Samuel Ajayi Crowther",
+            "Emmanuel Alayande",
+            "Adeboye G.E.O", 
+            "Abiodun Clement"],
+        "answer": "1"
+    },
+     {
+        "question": "When was ECOWAS founded?",
+        "options":[
+            "1924",
+            "1990",
+            "1975",
+            "1970"],
+        "answer": "3"
+    },
+    {
+        "question": "What is the slogan of Lagos State?",
+        "options":[
+            "Centre of Goodness",
+            "Centre of Excellence",
+            "Centre of Joy",
+            "Centra of Excellence"],
+        "answer": "2"
+    },
+    {
+        "question": "The most populated country in the world?",
+        "options":[
+            "India",
+            "China",
+            "Japan",
+            "United State Of America"],
+        "answer": "2"
+    },
+     {
+        "question": "When was Nigeria amalgamated?",
+          "options":[
+            "1963",
+            "1914",
+            "1957",
+            "1950"],
+        "answer": "2"
+    },
+    {
+        "question": "Find the amount and the compound interest on Rs. 1,00,000 compounded quarterly for 9 months at the rate of 4% per annum.",
+        "options":[
+            "Rs. 130303.10 ",
+            "Rs. 133003.10 ",
+            "Rs. 100330.10 ",
+            "Rs. 103030.10"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"What is the difference between the compound interests on Rs. 5000 for 1 ½ year at 4% per annum compounded yearly and half-yearly?",
+        "options":[
+            "Rs. 5.04",
+            "Rs. 3.03",
+            "Rs. 4.23",
+            "Rs. 2.04"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"Find the compound interest on Rs. 8000 at 15% per annum for 2 years 4 months, compounded annually.",
+        "options":[
+            "Rs. 3109",
+            "Rs. 3333",
+            "Rs. 6000",
+            "Rs. 2191"],
+        "answer":"1"
+    },
+    {
+        "question":"Find the compound interest on Rs 48,000 for one year at 8% per annum when compounded half-yearly.",
+        "options":[
+            "Rs 4,531.77",
+            "Rs 3,916.80",
+            "Rs 5,321.80",
+            "Rs 1,213.66"
+        ],
+        "answer":"2"
+    },
+    {
+        "question":" At what rate of compound interest per annum, a sum of Rs. 1200 becomes Rs. 1348.32 in 2 years?",
+        "options":[
+            "6%",
+            "4%",
+            "10%",
+            "13%"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"Find the compound interest (CI) on Rs. 12,600 for 2 years at 10% per annum compounded annually.",
+        "options":[
+            "Rs. 1005",
+            "Rs. 2646",
+            "Rs. 6300",
+            "Rs. 9091"
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"Evaluate algebraic expression ax2 + by2 – cz for x = 1, y = -1, z = 2, a = -2, b = 1, c = -2:",
+        "options":[
+            "2",
+            "1",
+            "4",
+            "3"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"Add 3xy + 5yz – 7xz + 1 and -4xy + 2yz – 2xz + 5xyz + 1.",
+        "options":[
+            "xy - 6yz - 9xz - 5xyz - 2",
+            "-xy - 7yz + 9xz - 5xyz + 2",
+            "xy + 6yz - 9xz + 5yz + 1",
+            "-xy + 7yz – 9xz + 5xyz + 2"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":" Simplify the expression: −2a(a + b) − 2a − (a + b)(−2a) − a − 2",
+        "options":[
+            "3a - 2",
+            "2a + 3",
+            "-3a – 2",
+            "-2a + 3"
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"Select all the text in MS Word document by",
+        "options":[
+            "Ctrl + S",
+            "Ctrl + L",
+            "Ctrl + A",
+            "Ctrl + V"
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"Everything we store in computer is stored in form of a?",
+        "options":[
+            "File",
+            "Folder",
+            "Sub folder",
+            "None of the above"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"Deleted file and folders are stored in?",
+        "options":[
+            "Recycle bin",
+            "My Computer",
+            "Control Panel",
+            "None of the above"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"Which icon allows user to access all drives, files, and folders on the computer",
+        "options":[
+            "Application",
+            "Windows",
+            "My Computer",
+            "Recycle bin"
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"Picture used for the desktop background is called?",
+        "options":[
+            "Background",
+            "Desktop image",
+            "Wall image",
+            "Wallpaper"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"The first screen that appears on monitor after loading OS is called?",
+        "options":[
+            "Icon",
+            "Desktop",
+            "Wallpaper",
+            "None of the above"
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"GUI stands for?",
+        "options":[
+            "Graphical User Interface",
+            "Graphical User Interaction",
+            "Graphical User Interactive",
+            "None of the above"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"An anti-virus program can be effective when?",
+        "options":[
+            "it run in the background at all times",
+            "it is regularly updated",
+            "it scan full disk periodically",
+            "All of the above"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"A computer virus can infect only?",
+        "options":[
+            "Hardware",
+            "Software",
+            "Both of the above",
+            "None of the above"
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"The extension of image file is?",
+        "options":[
+            ".xls",
+            ".jpg",
+            ".doc",
+            ".docx"
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"The file name and file name extention are separated by a?",
+        "options":[
+            "period",
+            "comma",
+            "semi colon",
+            "None of the above"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"Each file in computer has?",
+        "options":[
+            "Name",
+            "Extension",
+            "Both of the above",
+            "None of the above"
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"BIOS stands for?",
+        "options":[
+            "Basic Input/Output System",
+            "Base Input/Output System",
+            "Basic Input and Output Systematic",
+            "None of the above"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"Hardware would mot be able to function without?",
+        "options":[
+            "Shareware",
+            "Freeware",
+            "Software",
+            "None of the above"
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"Which of the followuing is an output device?",
+        "options":[
+            "Monitor",
+            "Speaker",
+            "Printer",
+            "All of the above"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"Software that starts working as soon as we switch on a computer is",
+        "options":[
+            "RAM",
+            "ROM",
+            "Operating System",
+            "None of the above"
+         ],
+        "answer":"3"
+    },
+    {
+        "question":"Navigation keys are?",
+        "options":[
+            "Arrow Keys",
+            "Page Up",
+            "Page down",
+            "All of the above"
+
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"Which of the following is not computer hardware?",
+        "options":[
+            "RAM",
+            "Keyboard",
+            "MS Paint",
+            "Monitor"
+
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"The name of a word document displays in?",
+        "options":[
+            "Ribbon",
+            "Title bar",
+            "Status bar",
+            "Home tab"
+
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"She was a devoted wife and looked_____ her husband.",
+        "options":[
+            "at",
+            "upon",
+            "after",
+            "for"
+
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"Good sleep is necessary_____ good health.",
+        "options":[
+            "from",
+            "for",
+            "of",
+            "at"
+
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"My voice reverberated_____ the walls of the castle.",
+        "options":[
+            "from",
+            "on",
+            "with",
+            "in"
+
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"A steady minds triumhs_____ difficuties.",
+        "options":[
+            "with",
+            "at",
+            "in",
+            "over"
+
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"Jack's mind was attuned_____ music.",
+        "options":[
+            "on",
+            "at",
+            "with",
+            "to"
+
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"I bought him_____ with great difficulty.",
+        "options":[
+            "round",
+            "up",
+            "in",
+            "about"
+
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"My uncle has invested a lot of money_____ farming.",
+        "options":[
+            "in",
+            "on",
+            "for",
+            "into"
+
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"The principal called______ the names of the winners.",
+        "options":[
+            "at",
+            "on",
+            "for",
+            "out"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"Siva has no control_____ his temper.",
+        "options":[
+            "in",
+            "after",
+            "at",
+            "over"
+        ],
+        "answer":"4"
+    },
+    {
+        "question":"He was advised to abstain_____ all alcohlic drinks.",
+        "options":[
+            "to",
+            "at",
+            "from",
+            "for"
+        ],
+        "answer":"3"
+    },
+    {
+        "question":"Minority asoirations cannot forever be kept in check_____ the gun.",
+        "options":[
+            "from",
+            "by",
+            "under",
+            "with"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"______ the whole, i like the book very much.",
+        "options":[
+            "from",
+            "on",
+            "at",
+            "in"
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"My relations______ Suganya are good.",
+        "options":[
+            "with",
+            "on",
+            "against",
+            "to"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"The teacher has no control______ the students.",
+        "options":[
+            "over",
+            "on",
+            "with",
+            "at"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"A good judge never jumps______ conclusion",
+        "options":[
+            "at",
+            "to",
+            "on",
+            "for"
+        ],
+        "answer":"2"
+    },
+    {
+        "question":"Exercise is beneficial______ health.",
+        "options":[
+            "to",
+            "in",
+            "for",
+            "towards"
+        ],
+        "answer":"1"
+    },
+    {
+        "question":"India is committed_____ a policy of peaceful existence.",
+        "options":[
+            "with",
+            "of",
+            "for",
+            "to"
+        ],
+        "answer":"4"
+    }
+]

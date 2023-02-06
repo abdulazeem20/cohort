@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+require_once __DIR__ . '/./src/request.php';
+if (isset($_SESSION["testUser"])) {
+    header("location: test.php");
+}
+
+?>
 <html lang="en">
 
     <head>
@@ -16,10 +23,12 @@
             <h3>KLemweb Quick Test</h3>
             <div>
                 <input type="email" name="email" placeholder="Enter your email here...">
-                <button type="submit">Start<i class="fas fa-sign-in-alt"></i> </button>
+                <button type="submit" name="">Start<i class="fas fa-sign-in-alt"></i> </button>
             </div>
         </form>
+        <script src="./assets/scripts/jquery.js"></script>
         <script src="./assets/scripts/all.min.js"></script>
+        <script src="./assets/scripts/login.js"></script>
     </body>
 
 </html>

@@ -1,11 +1,28 @@
 <?php
 require_once __DIR__ . "/../Model/Intern.php";
+require_once __DIR__ . "/./../library/Email.php";
 
 
 class EnrolController
 {
     public function __construct()
     {
+    }
+
+    public function checkUser($data)
+    {
+        $exists = ((new Intern())->fetchUser($data));
+        if ($exists && $exists[0]["testStatus"] != 1) {
+            $_SESSION["testUser"] = $data["email"];
+            echo json_encode([
+                "status" => "success",
+            ]);
+        } else {
+            echo json_encode([
+                "status" => "error",
+                "msg" => "Email does not exist or you've already attempted the test ",
+            ]);
+        }
     }
 
     public function exists($data)
@@ -22,6 +39,7 @@ class EnrolController
             ]);
         }
     }
+
     public function empty(array $data)
     {
         $response = [];
@@ -56,9 +74,10 @@ class EnrolController
     {
         $insert = ((new Intern())->insert($data));
         if ($insert) {
+            (new Email($data))->sendCongratulatoryMessage();
             header('location: ../../login.php');
         } else {
-            header("location:". $_SERVER['HTTP_ORIGIN']. '/enrol.html');
+            header("location:" . $_SERVER['HTTP_ORIGIN'] . '/enrol.html');
         }
     }
 }
