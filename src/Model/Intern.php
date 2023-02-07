@@ -52,7 +52,7 @@ class Intern extends Database
     {
         // print_r($data);
         try {
-            $query = "INSERT INTO intern(firstname,lastname, othername, gender, email, phone_number, date_of_birth, admission_mode, course) VALUES(:firstname, :lastname, :othername, :gender, :email, :phone_number, :date_of_birth, :admission_mode, :course)";
+            $query = "INSERT INTO intern(firstname,lastname, othername, gender, email, phone_number, date_of_birth, admission_mode, course, hostel) VALUES(:firstname, :lastname, :othername, :gender, :email, :phone_number, :date_of_birth, :admission_mode, :course, :hostel)";
             $insert = $this->connection;
             $prepared = $insert->prepare($query);
             $stmt = $prepared->execute([
@@ -65,6 +65,7 @@ class Intern extends Database
                 ':date_of_birth' => $data['dob'],
                 ':admission_mode' => $data['admission_mode'],
                 ':course' => $data['course'],
+                ':hostel' => $data['hostel'],
             ]);
             if ($stmt) {
                 return true;

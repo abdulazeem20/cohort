@@ -16,6 +16,10 @@ form {
     align-items    : center;
     gap            : 1.5rem;
 
+    &.hide {
+        display: none;
+    }
+
     img {
         height: 5rem;
     }
@@ -61,6 +65,10 @@ form {
             text-transform : uppercase;
             padding-left   : .5rem;
             padding-right  : .5rem;
+
+            &.disabled {
+                background: lighten($color: $primaryColor, $amount: 9%);
+            }
         }
     }
 
@@ -75,6 +83,61 @@ form {
 
         &.error {
             color: $danger;
+        }
+    }
+}
+
+.after_login {
+    display        : none;
+    flex-direction : column;
+    gap            : 1rem;
+    justify-content: center;
+    align-items    : center;
+
+    &.show {
+        display  : flex;
+        animation: slideIn 1s;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity  : .4;
+            transform: translateY(-10%)
+        }
+
+        from {
+            opacity  : 1;
+            transform: translateY(0)
+        }
+    }
+
+    button {
+        @include button;
+        width    : 100%;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+
+        &:first-of-type {
+            color : $success;
+            border: 1px solid $success;
+
+            &:hover {
+                &::before {
+                    width: 0;
+                }
+            }
+        }
+
+        &:last-of-type {
+            color : $primaryColor;
+            border: 1px solid $primaryColor;
+
+            &:hover {
+                color: $textColor;
+            }
+
+            &::before {
+                background: $primaryColor;
+            }
         }
     }
 }
