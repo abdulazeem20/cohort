@@ -7,7 +7,7 @@
         "duration": "4 months",
         "ft": "(4 hours/day, 4 days/week)",
         "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
-        "tuition": 3500
+        "tuition": 180000
     },
     {
         "id": 2,
@@ -17,7 +17,7 @@
         "duration": "4 months",
         "ft": "(4 hours/day, 4 days/week)",
         "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
-        "tuition": 3500
+        "tuition": 200000
     },
     
     {
@@ -28,37 +28,37 @@
         "duration": "4 months",
         "ft": "(4 hours/day, 4 days/week)",
         "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
-        "tuition": 3500
+        "tuition": 300000
     },
     {
         "id": 4,
         "name": "Data Analysis",
         "mini_info": "Learn how to inspect, cleanse, transform and model data with the goal of descovering useful information , informing conclusion and supporting decision making.",
-        "description": "As a data analyst, you have a better understanding of key concepts and the nuances in statistical methods. This also includes studying trends in data, how to use data to solve business problems, and bringing together diverse data, scientific methods, processes, and analytics to drive value for your organization using Microsoft Excel, Power BI, SQL, Tableau and SPSS etc",
+        "description": "As a data analyst, you have a better understanding of key concepts and the nuances in statistical methods. This also includes studying trends in data, how to use data to solve business problems, and bringing together diverse data, scientific methods, processes, and analytics to drive value for your organization using Microsoft Excel, Power BI, SQL, VBA, Tableau and SPSS etc",
         "duration": "3 months",
         "ft": "(4 hours/day, 5 days/week)",
         "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
-        "tuition": 3500
+        "tuition": 120000
     },   
     {
         "id": 5,
         "name": "Data Science",
         "mini_info": "Learn how to analyze data for actionable insights by identifying data-analytics problems that offer the greatest opportunities to any organization.",
-        "description": "Data Science professionals are able to understand business intelligence, advanced data mining, data visualization, predictive analytics and data science programming and implement the methods using real data obtained from different sources. You’ll work with different packages and understand deep concepts which include; Mathematics, Statistics, R Programming, Python, Advanced Statistics in Python, Machine & Deep Learning .",
+        "description": "Data Science professionals are able to understand business intelligence, advanced data mining, data visualization, predictive analytics and data science programming and implement the methods using real data obtained from different sources. You’ll work with different packages and understand deep concepts which include; Mathematics, Statistics, R Programming, Python, Advanced Statistics in Python, VBA, Machine & Deep Learning .",
         "duration": "8 months",
         "ft": "(4 hours/day, 5 days/week)",
         "pt": " 5 hours/day | Weekends | (Fridays and Saturdays)",
-        "tuition": 3500
+        "tuition": 200000
     },
     {
         "id": 6,
-        "name": "Graphics Design",
+        "name": "Graphic Design",
         "mini_info": "Learn all the skills and technique you need to get you started creating incredible designs.",
         "description": "Do you want to know the process of creating Logos and Branding packages? Are you intimidated by learning Photoshop, Illustrator or InDesign and want to learn through practical real-world projects?  Then This course will be for you! .",
         "duration": "2 months",
         "ft": "(2 hours/day, 5 days/week)",
         "pt": "5 hours/day | Weekends | (Fridays and Saturdays)",
-        "tuition": 3500
+        "tuition": 50000
     },
     {
         "id": 7,
@@ -68,6 +68,6 @@
         "duration": "3 months",
         "ft":  "(2 hours/day, 4 days/week)",
         "pt": "5 hours/day | Weekends | (Fridays and Saturdays)",
-        "tuition": 3500
+        "tuition": 100000
     }
 ]

@@ -3,8 +3,7 @@
 
 body {
     display           : grid;
-    grid-template-rows: auto 1fr;
-    font-family       : Arial, Helvetica, sans-serif;
+    grid-template-rows: auto 1fr auto;
 }
 
 
@@ -29,7 +28,6 @@ header {
             height   : 5rem;
             max-width: 20rem;
         }
-
     }
 
     p {
@@ -47,6 +45,98 @@ header {
 
 main {
     @include main;
+}
+
+footer {
+
+    padding           : calc($pad * 2);
+    display           : flex;
+    flex-direction    : column;
+    gap               : 3rem;
+    // justify-content: center;
+    align-items       : center;
+
+    @include responsiveMedia(md) {
+        flex-direction : row;
+        justify-content: space-around;
+    }
+
+    img {
+        width : 4rem;
+        height: 4rem;
+    }
+
+    ul {
+        list-style    : none;
+        display       : flex;
+        flex-direction: column;
+        gap           : .5rem;
+        padding       : 0;
+
+        @include responsiveMedia(md) {
+            flex-direction: row;
+            gap           : 1rem;
+        }
+
+        li {
+            text-align: center;
+        }
+    }
+
+    a {
+        @include link;
+    }
+
+    >div {
+        display       : flex;
+        flex-direction: column;
+        gap           : .5rem;
+
+        .top {
+            display       : flex;
+            gap           : .8rem;
+            flex-direction: column;
+            text-align    : center;
+
+            @include responsiveMedia(md) {
+                flex-direction : row;
+                justify-content: space-between;
+
+                a {
+                    &:first-of-type {
+                        margin-right: 1rem;
+                    }
+
+                    &:last-of-type {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            display        : flex;
+            justify-content: center;
+            gap            : 1rem;
+
+            @include responsiveMedia(md) {
+                justify-content: space-around;
+            }
+
+            a {
+                font-size: 1.1rem;
+
+                @include responsiveMedia(md) {
+                    font-size: 1.5rem;
+
+                    &:hover {
+                        transform: translateY(-.3rem);
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 #courseModal {
