@@ -106,7 +106,8 @@ $(".submit").click(function ()
 					hostel = new Intl.NumberFormat().format(40000)
 				}
 				$(".modal .course").empty().append(course.name);
-				$(".modal .price").empty().append(`₦ ${new Intl.NumberFormat().format(course.tuition)} + ₦ ${hostel}`);
+				$(".modal .price").empty().append(`# ${new Intl.NumberFormat().format(course.tuition)} + # ${hostel}`);
+				$(".modal .price").empty().append(`? ${new Intl.NumberFormat().format(course.tuition)} + ? ${hostel}`);
 			});
 			$(".modal").addClass("show");
 			$(".overlay").addClass("show");
