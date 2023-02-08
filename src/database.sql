@@ -36,6 +36,7 @@ CREATE TABLE `intern` (
   `score` int DEFAULT '0',
   `trial` int DEFAULT '0',
   `testStatus` int DEFAULT '0',
+  `fee` int NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `hostel` varchar(3) NOT NULL,
   PRIMARY KEY (`id`),
@@ -62,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-02-06 22:06:37
+-- Dump completed on 2023-02-08 13:33:31
