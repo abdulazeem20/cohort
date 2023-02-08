@@ -9,7 +9,7 @@ try
 		names.map((name) => `<option value="${name}">${name}</option>`).join("")
 	);
 } catch (error) { }
-
+var fee;
 $("#email").on("input", function ()
 {
 	let email = $(this).val();
@@ -103,20 +103,24 @@ $(".submit").click(function ()
 					hostel = 0
 				} else
 				{
-					hostel = new Intl.NumberFormat().format(40000)
+					hostel = 40000
 				}
 				$(".modal .course").empty().append(course.name);
-				$(".modal .price").empty().append(`₦ ${new Intl.NumberFormat().format(course.tuition)} + ₦ ${hostel}`);
+				fee = course.tuition + hostel
+				$(".modal .price").empty().append(`₦ ${new Intl.NumberFormat().format(fee)}`);
 			});
 			$(".modal").addClass("show");
 			$(".overlay").addClass("show");
 		}
 	});
 });
-$("#enrol_submit").on("submit", function ()
+$("#enrol").on("submit", function (e)
 {
+	e.preventDefault()
 	let data = new FormData($("#enrol")[0]);
+	data.append("fee", fee)
 	data.append("insert", true);
+	// console.log(data);
 	$.ajax({
 		method: "POST",
 		url: "../../src/request.php",
@@ -126,6 +130,7 @@ $("#enrol_submit").on("submit", function ()
 		contentType: false,
 		cache: false,
 	});
+	location.href = "../../login.php"
 });
 
 $(".overlay").click(function ()

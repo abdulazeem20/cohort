@@ -4,18 +4,18 @@ require_once __DIR__ . "/./Mailer.php";
 class Email
 {
 
-    protected array $details;
-    public function __construct(array $details)
-    {
-        $this->details = $details;
-    }
+  protected array $details;
+  public function __construct(array $details)
+  {
+    $this->details = $details;
+  }
 
-    public function sendCongratulatoryMessage()
-    {
-        $subject = "Enrollment Sucessful";
-        $internName = $this->details["firstname"] . " " . $this->details["lastname"];
-        $internEmail = $this->details["email"];
-        $message = <<<Message
+  public function sendCongratulatoryMessage()
+  {
+    $subject = "Enrollment Sucessful";
+    $internName = $this->details["firstname"] . " " . $this->details["lastname"];
+    $internEmail = $this->details["email"];
+    $message = <<<Message
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -53,21 +53,21 @@ class Email
 
         Message;
 
-        $details = [
-            "internName" => $internName,
-            "subject" => $subject,
-            "internEmail" => $internEmail,
-            "message" => $message
-        ];
+    $details = [
+      "internName" => $internName,
+      "subject" => $subject,
+      "internEmail" => $internEmail,
+      "message" => $message
+    ];
 
-        (new Mailer($details))->sendMail();
-    }
-    public function sendTestCompletionMessage()
-    {
-        $subject = "Test Sucessfully Completed";
-        $internName = $this->details["firstname"] . " " . $this->details["lastname"];
-        $internEmail = $this->details["email"];
-        $message = <<<Message
+    (new Mailer($details))->sendMail();
+  }
+  public function sendTestCompletionMessage()
+  {
+    $subject = "Test Sucessfully Completed";
+    $internName = $this->details["firstname"] . " " . $this->details["lastname"];
+    $internEmail = $this->details["email"];
+    $message = <<<Message
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -105,13 +105,13 @@ class Email
 
         Message;
 
-        $details = [
-            "internName" => $internName,
-            "subject" => $subject,
-            "internEmail" => $internEmail,
-            "message" => $message
-        ];
+    $details = [
+      "internName" => $internName,
+      "subject" => $subject,
+      "internEmail" => $internEmail,
+      "message" => $message
+    ];
 
-        (new Mailer($details))->sendMail();
-    }
+    (new Mailer($details))->sendMail();
+  }
 }

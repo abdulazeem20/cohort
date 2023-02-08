@@ -5,6 +5,9 @@ require_once __DIR__ . "/./Controllers/enrolController.php";
 require_once __DIR__ . "/./Model/Intern.php";
 require_once __DIR__ . "/./library/Email.php";
 
+
+// echo "Hello World";
+
 if (isset($_POST['exist'])) {
     array_pop($_POST);
     (new EnrolController())->exists($_POST);
@@ -31,6 +34,7 @@ if (isset($_POST['exist'])) {
     }
 } else if (isset($_POST['insert'])) {
     array_pop($_POST);
+    // print_r($_POST);
     (new EnrolController())->insert($_POST);
 } else if (isset($_POST["login"])) {
     array_pop($_POST);

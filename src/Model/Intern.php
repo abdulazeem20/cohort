@@ -50,9 +50,8 @@ class Intern extends Database
     }
     public function insert($data)
     {
-        // print_r($data);
         try {
-            $query = "INSERT INTO intern(firstname,lastname, othername, gender, email, phone_number, date_of_birth, admission_mode, course, hostel) VALUES(:firstname, :lastname, :othername, :gender, :email, :phone_number, :date_of_birth, :admission_mode, :course, :hostel)";
+            $query = "INSERT INTO intern(firstname,lastname, othername, gender, email, phone_number, date_of_birth, admission_mode, course, fee, hostel) VALUES(:firstname, :lastname, :othername, :gender, :email, :phone_number, :date_of_birth, :admission_mode, :course, :fee, :hostel)";
             $insert = $this->connection;
             $prepared = $insert->prepare($query);
             $stmt = $prepared->execute([
@@ -65,6 +64,7 @@ class Intern extends Database
                 ':date_of_birth' => $data['dob'],
                 ':admission_mode' => $data['admission_mode'],
                 ':course' => $data['course'],
+                ':fee' => $data['fee'],
                 ':hostel' => $data['hostel'],
             ]);
             if ($stmt) {
