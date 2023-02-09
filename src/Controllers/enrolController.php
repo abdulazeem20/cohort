@@ -75,7 +75,7 @@ class EnrolController
         $insert = ((new Intern())->insert($data));
         if ($insert) {
             (new Email($data))->sendCongratulatoryMessage();
-            // header('location: ../../login.php');
+            echo json_encode(["status" => "success"]);
         } else {
             header("location:" . $_SERVER['HTTP_ORIGIN'] . '/enrol.html');
         }

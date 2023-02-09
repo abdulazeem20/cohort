@@ -18,6 +18,7 @@
 --
 -- Table structure for table `intern`
 --
+DROP TABLE intern;
 
 DROP TABLE IF EXISTS `intern`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;

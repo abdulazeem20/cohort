@@ -1,5 +1,4 @@
-try
-{
+try {
 	let coursesRes = await fetch(
 		`${location.origin}/assets/scripts/contents/courses.json`
 	);
@@ -8,44 +7,35 @@ try
 	$("#courses").append(
 		names.map((name) => `<option value="${name}">${name}</option>`).join("")
 	);
-} catch (error) { }
+} catch (error) {}
 var fee;
-$("#email").on("input", function ()
-{
+$("#email").on("input", function () {
 	let email = $(this).val();
 	let data = { email, exist: true };
-	$.post("../../src/request.php", data, null, "json").done((res) =>
-	{
-		if (res.status == "error")
-		{
+	$.post("../../src/request.php", data, null, "json").done((res) => {
+		if (res.status == "error") {
 			$("#enrolSubmit").prop({ disabled: true });
 			$(".email-error").empty().append(res.msg);
-		} else
-		{
+		} else {
 			$(".email-error").empty();
 			$("#enrolSubmit").prop({ disabled: false });
 		}
 	});
 });
-$("#phone").on("input", function ()
-{
+$("#phone").on("input", function () {
 	let phone_number = $(this).val();
 	let data = { phone_number, exist: true };
-	$.post("../../src/request.php", data, null, "json").done((res) =>
-	{
-		if (res.status == "error")
-		{
+	$.post("../../src/request.php", data, null, "json").done((res) => {
+		if (res.status == "error") {
 			$("#enrolSubmit").prop({ disabled: true });
 			$(".phone-error").empty().append(res.msg);
-		} else
-		{
+		} else {
 			$(".phone-error").empty();
 			$("#enrolSubmit").prop({ disabled: false });
 		}
 	});
 });
-$(".submit").click(function ()
-{
+$(".submit").click(function () {
 	let data = new FormData($("#enrol")[0]);
 	data.append("enrolValidate", true);
 	$.ajax({
@@ -56,32 +46,25 @@ $(".submit").click(function ()
 		processData: false,
 		contentType: false,
 		cache: false,
-	}).done(function (res)
-	{
-		if (res.status == "error")
-		{
+	}).done(function (res) {
+		if (res.status == "error") {
 			$("form div p").empty();
-			$.each(res.message, function (i, el)
-			{
+			$.each(res.message, function (i, el) {
 				$(`.${i}`).append(el);
 			});
-			if (res.message.invalid)
-			{
+			if (res.message.invalid) {
 				$(".email-error").empty().append(res.message.invalid);
-			} else if (res.message.num_invalid)
-			{
+			} else if (res.message.num_invalid) {
 				$(".phone-error").empty().append(res.message.num_invalid);
 			}
-		} else if (res.status == "success")
-		{
+		} else if (res.status == "success") {
 			$("form div p").empty();
 			$(".modal .firstname").text($("#firstname").val());
 			$(".modal .lastname").text($("#lastname").val());
 			$(".modal .othername").text($("#othername").val());
 			$(".modal .email").text($("#email").val());
 			$(".modal .phone").text($("#phone").val());
-			$(".genderR").each(function ()
-			{
+			$(".genderR").each(function () {
 				if ($(this).prop("checked") == false) return;
 				$(".modal .sex").text($(this).val());
 			});
@@ -92,33 +75,34 @@ $(".submit").click(function ()
 				null,
 				null,
 				"json"
-			).done((res) =>
-			{
+			).done((res) => {
 				let name = $("#courses").val();
 				let course = res.filter((el) => el.name == name)[0];
 				$(".modal .description").empty().append(course.description);
 				let hostel;
-				if ($("#no").prop("checked") == true)
-				{
-					hostel = 0
-				} else
-				{
-					hostel = 40000
+				if ($("#no").prop("checked") == true) {
+					hostel = 0;
+				} else {
+					hostel = 40000;
 				}
 				$(".modal .course").empty().append(course.name);
-				fee = course.tuition + hostel
-				$(".modal .price").empty().append(`₦ ${new Intl.NumberFormat().format(fee)}`);
+				fee = course.tuition + hostel;
+				$(".modal .price")
+					.empty()
+					.append(`₦ ${new Intl.NumberFormat().format(fee)}`);
 			});
 			$(".modal").addClass("show");
 			$(".overlay").addClass("show");
 		}
 	});
 });
-$("#enrol").on("submit", function (e)
-{
-	e.preventDefault()
+$("#enrol").on("submit", function (e) {
+	e.preventDefault();
 	let data = new FormData($("#enrol")[0]);
-	data.append("fee", fee)
+	let button = $("#enrol_submit");
+	let text = button.text();
+	button.prop({disabled: true}).text("Please Wait")
+	data.append("fee", fee);
 	data.append("insert", true);
 	// console.log(data);
 	$.ajax({
@@ -129,17 +113,17 @@ $("#enrol").on("submit", function (e)
 		processData: false,
 		contentType: false,
 		cache: false,
+		success: function (res) {
+			if (res.status == "success") location.href = "../../login.php";
+		},
 	});
-	location.href = "../../login.php"
 });
 
-$(".overlay").click(function ()
-{
+$(".overlay").click(function () {
 	$(".modal").removeClass("show");
 	$(".overlay").removeClass("show");
 });
-$("#close").click(function ()
-{
+$("#close").click(function () {
 	$(".modal").removeClass("show");
 	$(".overlay").removeClass("show");
 });
